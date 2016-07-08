@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0C079C971D2DD0E100B10CC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079C961D2DD0E100B10CC9 /* AppDelegate.swift */; };
-		0C079C991D2DD0E100B10CC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079C981D2DD0E100B10CC9 /* ViewController.swift */; };
 		0C079C9C1D2DD0E100B10CC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C079C9A1D2DD0E100B10CC9 /* Main.storyboard */; };
 		0C079C9E1D2DD0E100B10CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C079C9D1D2DD0E100B10CC9 /* Assets.xcassets */; };
 		0C079CA11D2DD0E100B10CC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C079C9F1D2DD0E100B10CC9 /* LaunchScreen.storyboard */; };
 		0C079CAC1D2DD0E200B10CC9 /* Aula_AluraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079CAB1D2DD0E200B10CC9 /* Aula_AluraTests.swift */; };
 		0C079CB71D2DD0E200B10CC9 /* Aula_AluraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079CB61D2DD0E200B10CC9 /* Aula_AluraUITests.swift */; };
+		0CA47FBF1D2F346100A22CA9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FBE1D2F346100A22CA9 /* Meal.swift */; };
+		0CA47FC11D2F34B900A22CA9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FC01D2F34B900A22CA9 /* Item.swift */; };
+		0CA47FC31D2F35EA00A22CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		0C079C931D2DD0E100B10CC9 /* Aula Alura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aula Alura.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C079C961D2DD0E100B10CC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C079C981D2DD0E100B10CC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C079C9B1D2DD0E100B10CC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C079C9D1D2DD0E100B10CC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C079CA01D2DD0E100B10CC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,10 @@
 		0C079CB21D2DD0E200B10CC9 /* Aula AluraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aula AluraUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C079CB61D2DD0E200B10CC9 /* Aula_AluraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aula_AluraUITests.swift; sourceTree = "<group>"; };
 		0C079CB81D2DD0E200B10CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CA47FBE1D2F346100A22CA9 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		0CA47FC01D2F34B900A22CA9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CA47FC41D2F362100A22CA9 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +102,14 @@
 		0C079C951D2DD0E100B10CC9 /* Aula Alura */ = {
 			isa = PBXGroup;
 			children = (
+				0CA47FBB1D2F342100A22CA9 /* models */,
+				0CA47FBC1D2F342100A22CA9 /* viewcontrollers */,
+				0CA47FBD1D2F342100A22CA9 /* views */,
 				0C079C961D2DD0E100B10CC9 /* AppDelegate.swift */,
-				0C079C981D2DD0E100B10CC9 /* ViewController.swift */,
-				0C079C9A1D2DD0E100B10CC9 /* Main.storyboard */,
 				0C079C9D1D2DD0E100B10CC9 /* Assets.xcassets */,
 				0C079C9F1D2DD0E100B10CC9 /* LaunchScreen.storyboard */,
 				0C079CA21D2DD0E100B10CC9 /* Info.plist */,
+				0CA47FC41D2F362100A22CA9 /* MyPlayground.playground */,
 			);
 			path = "Aula Alura";
 			sourceTree = "<group>";
@@ -123,6 +130,31 @@
 				0C079CB81D2DD0E200B10CC9 /* Info.plist */,
 			);
 			path = "Aula AluraUITests";
+			sourceTree = "<group>";
+		};
+		0CA47FBB1D2F342100A22CA9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0CA47FBE1D2F346100A22CA9 /* Meal.swift */,
+				0CA47FC01D2F34B900A22CA9 /* Item.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		0CA47FBC1D2F342100A22CA9 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		0CA47FBD1D2F342100A22CA9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				0C079C9A1D2DD0E100B10CC9 /* Main.storyboard */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +288,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C079C991D2DD0E100B10CC9 /* ViewController.swift in Sources */,
+				0CA47FC11D2F34B900A22CA9 /* Item.swift in Sources */,
+				0CA47FBF1D2F346100A22CA9 /* Meal.swift in Sources */,
+				0CA47FC31D2F35EA00A22CA9 /* ViewController.swift in Sources */,
 				0C079C971D2DD0E100B10CC9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +333,7 @@
 				0C079C9B1D2DD0E100B10CC9 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0C079C9F1D2DD0E100B10CC9 /* LaunchScreen.storyboard */ = {
@@ -482,6 +517,7 @@
 				0C079CBD1D2DD0E200B10CC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C079CBE1D2DD0E200B10CC9 /* Build configuration list for PBXNativeTarget "Aula AluraTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +526,7 @@
 				0C079CC01D2DD0E200B10CC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C079CC11D2DD0E200B10CC9 /* Build configuration list for PBXNativeTarget "Aula AluraUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +535,7 @@
 				0C079CC31D2DD0E200B10CC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

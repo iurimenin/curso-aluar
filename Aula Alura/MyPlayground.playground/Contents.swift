@@ -2,37 +2,39 @@
 
 import UIKit
 
-let calorias:Array<Double> = [50.5, 100, 300, 500]
-
-let itens:Array<Double> = []
-
-for var i = 0; i < calorias.count; i++ {
-    print(calorias[i])
-}
-
-for i in 0...3 {
-    print(calorias[i])
-}
-
-for i in calorias {
-    print(i)
-}
-
-func allCalories(calories:Array<Double>) -> Double {
-    var total:Double = 0
-    for c in calorias {
-        total += c
+class Meal {
+    
+    var nome:String
+    var felicidade:Int
+    var items = Array<Item>()
+    init(nome:String, felicidade:Int){
+        self.nome = nome
+        self.felicidade = felicidade
     }
-    return total
+    
+    func todasCalorias() -> Double {
+        
+        var total = 0.0
+        for i in items {
+            total += i.calories
+        }
+        
+        return total
+    }
 }
 
-let totalCalorias = allCalories([10.5, 100, 300, 500])
-print(totalCalorias)
-
-var total = 0
-var values = [1,2]
-
-for v in values {
-    total += v
+class Item {
+    var name:String
+    var calories: Double
+    init(nome:String, calorias:Double){
+        self.name = nome
+        self.calories = calorias
+    }
 }
-print(total / values.count)
+
+let bolo = Meal(nome: "Chocolate", felicidade: 5);
+bolo.items.append(Item(nome: "brownie", calorias: 115))
+bolo.items.append(Item(nome: "vegan cream", calorias: 40))
+print(bolo.todasCalorias())
+
+print(bolo.nome)
