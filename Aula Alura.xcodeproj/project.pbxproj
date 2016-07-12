@@ -13,6 +13,8 @@
 		0C079CA11D2DD0E100B10CC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C079C9F1D2DD0E100B10CC9 /* LaunchScreen.storyboard */; };
 		0C079CAC1D2DD0E200B10CC9 /* Aula_AluraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079CAB1D2DD0E200B10CC9 /* Aula_AluraTests.swift */; };
 		0C079CB71D2DD0E200B10CC9 /* Aula_AluraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079CB61D2DD0E200B10CC9 /* Aula_AluraUITests.swift */; };
+		0C6B8CB81D35AAF700820D81 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6B8CB61D35AAF700820D81 /* NewItemViewController.xib */; };
+		0C6B8CBA1D35AB6800820D81 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B8CB91D35AB6800820D81 /* NewItemViewController.swift */; };
 		0CA47FBF1D2F346100A22CA9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FBE1D2F346100A22CA9 /* Meal.swift */; };
 		0CA47FC11D2F34B900A22CA9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FC01D2F34B900A22CA9 /* Item.swift */; };
 		0CA47FC31D2F35EA00A22CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */; };
@@ -49,6 +51,8 @@
 		0C079CB21D2DD0E200B10CC9 /* Aula AluraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aula AluraUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C079CB61D2DD0E200B10CC9 /* Aula_AluraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aula_AluraUITests.swift; sourceTree = "<group>"; };
 		0C079CB81D2DD0E200B10CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C6B8CB61D35AAF700820D81 /* NewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
+		0C6B8CB91D35AB6800820D81 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		0CA47FBE1D2F346100A22CA9 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		0CA47FC01D2F34B900A22CA9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		0CA47FBC1D2F342100A22CA9 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				0C6B8CB91D35AB6800820D81 /* NewItemViewController.swift */,
 				0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */,
 				0CA4B98E1D34709B00CC2F7A /* RefeicoesTableViewController.swift */,
 			);
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				0C079C9A1D2DD0E100B10CC9 /* Main.storyboard */,
+				0C6B8CB61D35AAF700820D81 /* NewItemViewController.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 			files = (
 				0C079CA11D2DD0E100B10CC9 /* LaunchScreen.storyboard in Resources */,
 				0C079C9E1D2DD0E100B10CC9 /* Assets.xcassets in Resources */,
+				0C6B8CB81D35AAF700820D81 /* NewItemViewController.xib in Resources */,
 				0C079C9C1D2DD0E100B10CC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +300,7 @@
 			files = (
 				0CA47FC11D2F34B900A22CA9 /* Item.swift in Sources */,
 				0CA47FBF1D2F346100A22CA9 /* Meal.swift in Sources */,
+				0C6B8CBA1D35AB6800820D81 /* NewItemViewController.swift in Sources */,
 				0CA4B98F1D34709B00CC2F7A /* RefeicoesTableViewController.swift in Sources */,
 				0CA47FC31D2F35EA00A22CA9 /* ViewController.swift in Sources */,
 				0C079C971D2DD0E100B10CC9 /* AppDelegate.swift in Sources */,

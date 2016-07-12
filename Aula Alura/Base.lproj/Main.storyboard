@@ -75,8 +75,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eYt-sO-UOa">
+                                <rect key="frame" x="0.0" y="204" width="320" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fMp-Dd-1lA"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Jaa-mz-XQc"/>
+                                </connections>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODv-hN-exl">
-                                <rect key="frame" x="68" y="143" width="30" height="30"/>
+                                <rect key="frame" x="88" y="137" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="add" destination="BYZ-38-t0r" eventType="touchUpInside" id="mjP-nr-2QJ"/>
@@ -90,6 +98,7 @@
                     <connections>
                         <outlet property="campoFelicidade" destination="xR8-rf-PQy" id="bsR-7Z-nxk"/>
                         <outlet property="campoNome" destination="W7g-EU-Tzf" id="oj7-gM-wOx"/>
+                        <outlet property="tableView" destination="eYt-sO-UOa" id="hs8-9g-G4K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

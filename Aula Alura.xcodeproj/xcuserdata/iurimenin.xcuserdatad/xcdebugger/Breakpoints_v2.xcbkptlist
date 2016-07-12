@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Aula Alura/viewcontrollers/ViewController.swift"
-            timestampString = "489979025.998499"
+            timestampString = "490059066.836945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "add()"
             landmarkType = "5">
          </BreakpointContent>
@@ -112,6 +112,22 @@
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Aula Alura/viewcontrollers/ViewController.swift"
+            timestampString = "490059066.836945"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "showNewItem()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
