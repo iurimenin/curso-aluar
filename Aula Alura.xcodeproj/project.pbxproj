@@ -16,6 +16,7 @@
 		0CA47FBF1D2F346100A22CA9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FBE1D2F346100A22CA9 /* Meal.swift */; };
 		0CA47FC11D2F34B900A22CA9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FC01D2F34B900A22CA9 /* Item.swift */; };
 		0CA47FC31D2F35EA00A22CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */; };
+		0CA4B98F1D34709B00CC2F7A /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA4B98E1D34709B00CC2F7A /* RefeicoesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		0CA47FC01D2F34B900A22CA9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0CA47FC41D2F362100A22CA9 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		0CA4B98E1D34709B00CC2F7A /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */,
+				0CA4B98E1D34709B00CC2F7A /* RefeicoesTableViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			files = (
 				0CA47FC11D2F34B900A22CA9 /* Item.swift in Sources */,
 				0CA47FBF1D2F346100A22CA9 /* Meal.swift in Sources */,
+				0CA4B98F1D34709B00CC2F7A /* RefeicoesTableViewController.swift in Sources */,
 				0CA47FC31D2F35EA00A22CA9 /* ViewController.swift in Sources */,
 				0C079C971D2DD0E100B10CC9 /* AppDelegate.swift in Sources */,
 			);
