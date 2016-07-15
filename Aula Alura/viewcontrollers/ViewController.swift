@@ -41,10 +41,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func add(item: Item) {
         items.append(item)
-        if tableView == nil {
-            return
+        if let table = tableView {
+            table.reloadData()
+        } else {
+         
+            let alerta = UIAlertController(title: "Oops!",
+                                         message: "Erro inesperado, mas o item foi adicionado.",
+                                         preferredStyle: UIAlertControllerStyle.Alert)
+
+            let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil)
+            
+            alerta.addAction(ok)
+            presentViewController(alerta, animated: true, completion: nil)
         }
-        tableView!.reloadData()
     }
     
     func showNewItem() {
@@ -87,8 +96,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
-    
-    
     
     @IBAction func add(){
         

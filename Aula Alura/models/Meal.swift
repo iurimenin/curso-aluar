@@ -28,4 +28,15 @@ class Meal {
         
         return total
     }
+    
+    func montaMensagemItens() -> String {
+        var msg = "Felicidade: \(self.felicidade)"
+        
+        for item in self.items {
+            
+            msg += "\n * \(item.nome) - \(item.calorias) calorias"
+        }
+
+        return msg
+    }
 }

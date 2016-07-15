@@ -34,12 +34,39 @@ class RefeicoesTableViewController: UITableViewController, AddMealDelegate {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.showDetail(_:)));
         let linha = indexPath.row
         let refeicao = refeicoes[linha]
-        
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
         
         cell.textLabel?.text = refeicao.nome
+        cell.addGestureRecognizer(longPress)
         return cell
     }
+    
+    func showDetail(recognizer : UILongPressGestureRecognizer){
+        
+        if recognizer.state == UIGestureRecognizerState.Began {
+            
+            let celula = recognizer.view as! UITableViewCell
+            let index = tableView.indexPathForCell(celula)
+            if index == nil{
+                return
+            }
+            let linha = index!.row
+            let refeicao = refeicoes[linha]
+            var mensagem = refeicao.montaMensagemItens()
+            
+            let alerta = UIAlertController(title: refeicao.nome,
+                              message: mensagem,
+                              preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil)
+            alerta.addAction(ok)
+            presentViewController(alerta, animated: true, completion: nil)
+        }
+    }
+ 
+    
+    
 }
