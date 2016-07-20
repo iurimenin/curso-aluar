@@ -11,14 +11,18 @@ import UIKit
 class RefeicoesTableViewController: UITableViewController, AddMealDelegate {
 
     
-    var refeicoes = [Meal(nome: "brownie chocolate", felicidade: 5),
-                     Meal(nome: "bolo de chocolate", felicidade: 4)
-                    ]
+    var refeicoes = Array<Meal>()
     
     func add(meal:Meal){
     
         refeicoes.append(meal)
+        Dao().salvaRefeicoes(refeicoes)
         tableView.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        
+        refeicoes = Dao().carregaRefeicoes()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -55,18 +59,15 @@ class RefeicoesTableViewController: UITableViewController, AddMealDelegate {
             }
             let linha = index!.row
             let refeicao = refeicoes[linha]
-            var mensagem = refeicao.montaMensagemItens()
-            
-            let alerta = UIAlertController(title: refeicao.nome,
-                              message: mensagem,
-                              preferredStyle: UIAlertControllerStyle.Alert)
-            
-            let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil)
-            alerta.addAction(ok)
-            presentViewController(alerta, animated: true, completion: nil)
+           
+            RemoveRefeicaoController(controller: self).show(refeicao, handler:{ action in
+                self.refeicoes.removeAtIndex(linha)
+                self.tableView.reloadData()
+            })
         }
     }
  
+    
     
     
 }

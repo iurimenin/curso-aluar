@@ -15,6 +15,9 @@
 		0C079CB71D2DD0E200B10CC9 /* Aula_AluraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079CB61D2DD0E200B10CC9 /* Aula_AluraUITests.swift */; };
 		0C6B8CB81D35AAF700820D81 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6B8CB61D35AAF700820D81 /* NewItemViewController.xib */; };
 		0C6B8CBA1D35AB6800820D81 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B8CB91D35AB6800820D81 /* NewItemViewController.swift */; };
+		0C8A6B1C1D3EEE2200AE7A62 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8A6B1B1D3EEE2100AE7A62 /* Alert.swift */; };
+		0C8A6B1E1D3EF93A00AE7A62 /* RemoveRefeicaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8A6B1D1D3EF93A00AE7A62 /* RemoveRefeicaoController.swift */; };
+		0C8A6B201D3F09AB00AE7A62 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8A6B1F1D3F09AB00AE7A62 /* Dao.swift */; };
 		0CA47FBF1D2F346100A22CA9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FBE1D2F346100A22CA9 /* Meal.swift */; };
 		0CA47FC11D2F34B900A22CA9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FC01D2F34B900A22CA9 /* Item.swift */; };
 		0CA47FC31D2F35EA00A22CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */; };
@@ -53,6 +56,9 @@
 		0C079CB81D2DD0E200B10CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C6B8CB61D35AAF700820D81 /* NewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
 		0C6B8CB91D35AB6800820D81 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		0C8A6B1B1D3EEE2100AE7A62 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		0C8A6B1D1D3EF93A00AE7A62 /* RemoveRefeicaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoController.swift; sourceTree = "<group>"; };
+		0C8A6B1F1D3F09AB00AE7A62 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		0CA47FBE1D2F346100A22CA9 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		0CA47FC01D2F34B900A22CA9 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0CA47FC21D2F35EA00A22CA9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 			children = (
 				0CA47FBE1D2F346100A22CA9 /* Meal.swift */,
 				0CA47FC01D2F34B900A22CA9 /* Item.swift */,
+				0C8A6B1F1D3F09AB00AE7A62 /* Dao.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -162,6 +169,8 @@
 			children = (
 				0C079C9A1D2DD0E100B10CC9 /* Main.storyboard */,
 				0C6B8CB61D35AAF700820D81 /* NewItemViewController.xib */,
+				0C8A6B1B1D3EEE2100AE7A62 /* Alert.swift */,
+				0C8A6B1D1D3EF93A00AE7A62 /* RemoveRefeicaoController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -299,11 +308,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CA47FC11D2F34B900A22CA9 /* Item.swift in Sources */,
+				0C8A6B1E1D3EF93A00AE7A62 /* RemoveRefeicaoController.swift in Sources */,
 				0CA47FBF1D2F346100A22CA9 /* Meal.swift in Sources */,
 				0C6B8CBA1D35AB6800820D81 /* NewItemViewController.swift in Sources */,
 				0CA4B98F1D34709B00CC2F7A /* RefeicoesTableViewController.swift in Sources */,
+				0C8A6B201D3F09AB00AE7A62 /* Dao.swift in Sources */,
 				0CA47FC31D2F35EA00A22CA9 /* ViewController.swift in Sources */,
 				0C079C971D2DD0E100B10CC9 /* AppDelegate.swift in Sources */,
+				0C8A6B1C1D3EEE2200AE7A62 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

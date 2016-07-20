@@ -18,41 +18,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var tableView : UITableView? 
     var delegate:AddMealDelegate?
     
-    var items = [
-        Item(nome: "Brownie de chocolate", calorias: 10),
-        Item(nome: "Zucchini muffin", calorias: 10),
-        Item(nome: "Cookie", calorias: 10),
-        Item(nome: "Bolo de Chocolate", calorias: 500),
-        Item(nome: "Chocolate frosting", calorias: 1000),
-        Item(nome: "Brownie de chocolate", calorias: 1000)
-    ]
- 
+    var items = Array<Item>()
     var selected = Array<Item>()
-    
     
     override func viewDidLoad() {
         let newItemButton = UIBarButtonItem(title: "new item",
                         style: UIBarButtonItemStyle.Plain,
                         target: self,
                         action: #selector(ViewController.showNewItem))
-        
         navigationItem.rightBarButtonItem = newItemButton
+    
+        items = Dao().carregaItems()
     }
     
     func add(item: Item) {
         items.append(item)
+        Dao().salvaItems(items)
         if let table = tableView {
             table.reloadData()
         } else {
-         
-            let alerta = UIAlertController(title: "Oops!",
-                                         message: "Erro inesperado, mas o item foi adicionado.",
-                                         preferredStyle: UIAlertControllerStyle.Alert)
-
-            let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil)
-            
-            alerta.addAction(ok)
-            presentViewController(alerta, animated: true, completion: nil)
+            Alert(controller: self).show("Erro inesperado, mas o item foi adicionado.");
         }
     }
     
@@ -61,6 +46,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         if let navigation = navigationController {
             navigation.pushViewController(newItem, animated: true)
+        } else {
+            Alert(controller: self).show()
         }
     }
     
@@ -79,53 +66,65 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        
-        if cell == nil {
-            return
-        }
-
-        let item = items[indexPath.row]
-        if cell?.accessoryType == UITableViewCellAccessoryType.None {
-            cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
-            selected.append(item)
-        } else {
-            cell?.accessoryType = UITableViewCellAccessoryType.None
-            if let position = selected.indexOf(item) {
-                selected.removeAtIndex(position)
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+         
+            let item = items[indexPath.row]
+            if cell.accessoryType == UITableViewCellAccessoryType.None {
+                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                selected.append(item)
+            } else {
+                cell.accessoryType = UITableViewCellAccessoryType.None
+                if let position = selected.indexOf(item) {
+                    selected.removeAtIndex(position)
+                } else {
+                    Alert(controller: self).show()
+                }
             }
+        } else {
+            Alert(controller: self).show()
         }
     }
     
-    @IBAction func add(){
-        
+    func getRefeicaoFromForm() -> Meal? {
+    
         if campoNome == nil || campoFelicidade == nil {
-            return
+            return nil
         }
         
         let nome = campoNome!.text
         let felicidade = Int(campoFelicidade!.text!)
-
+        
         if felicidade == nil {
-
-            return
+            
+            return nil
         }
         
         let meal = Meal(nome: nome!, felicidade: felicidade!)
         meal.items = selected
-
+        
         print("comeu: \(meal.nome) \(meal.felicidade) \(meal.items)")
         
-        if delegate == nil {
-            return
-        }
+        return meal
+    }
+    
+    @IBAction func add(){
         
-        delegate!.add(meal)
-        
-        if let navigation = self.navigationController {
+        if let meal = getRefeicaoFromForm() {
             
-            navigation.popViewControllerAnimated(true)
+            if let meals = delegate {
+                meals.add(meal)
+                
+                if let navigation = self.navigationController {
+                    navigation.popViewControllerAnimated(true)
+                } else {
+                    Alert(controller: self).show("Erro desconhecido, mas a refeição foi adicionada.")
+                }
+                
+                return
+            }
         }
+        
+        Alert(controller: self).show()
     }
 
 }
